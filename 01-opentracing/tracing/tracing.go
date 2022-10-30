@@ -9,7 +9,7 @@ import (
 	"github.com/uber/jaeger-client-go/config"
 )
 
-// Init creates a new instance of Jaeger tracer.
+// 创建一个 Jaeger opentracing.Tracer
 func NewTracer(serviceName string) (opentracing.Tracer, error) {
 	cfg := &config.Configuration{
 		// 服务名

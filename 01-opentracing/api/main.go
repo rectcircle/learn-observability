@@ -1,6 +1,6 @@
 package main
 
-// JAEGER_AGENT_HOST=localhost go run ./sms
+// JAEGER_AGENT_HOST=localhost go run ./01-opentracing/api
 
 import (
 	"net/http"

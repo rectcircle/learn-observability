@@ -1,6 +1,6 @@
 package main
 
-// JAEGER_AGENT_HOST=localhost go run ./auth
+// JAEGER_AGENT_HOST=localhost go run ./01-opentracing/auth
 
 import (
 	"net/http"
