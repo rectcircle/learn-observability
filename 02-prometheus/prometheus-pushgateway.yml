@@ -1,0 +1,11 @@
+# ~/Downloads/prometheus-2.37.2.darwin-amd64/prometheus --config.file=02-prometheus/prometheus-pushgateway.yml --storage.tsdb.path="prometheus-tsdb-data/"
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: "pushgateway"
+    # metrics_path: # 默认是 '/metrics'
+    honor_labels: true  # 不覆盖 metrics 自身的 job 和 instance 标签，参见： https://prometheus.io/docs/prometheus/latest/configuration/configuration/#scrape_config
+    static_configs:
+      - targets: ["localhost:9091"]
